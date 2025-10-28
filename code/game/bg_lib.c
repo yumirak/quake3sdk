@@ -2,6 +2,7 @@
 //
 // bg_lib,c -- standard C library replacement routines used by code
 // compiled for the virtual machine
+#ifdef Q3_VM
 
 #include "q_shared.h"
 
@@ -1322,3 +1323,4 @@ int sscanf( const char *buffer, const char *fmt, ... ) {
 }
 
 #endif
+#endif // Q3_VM
