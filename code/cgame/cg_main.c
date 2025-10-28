@@ -1115,7 +1115,7 @@ CG_BuildSpectatorString
 
 =======================
 */
-void CG_BuildSpectatorString() {
+void CG_BuildSpectatorString( void ) {
 	int i;
 	cg.spectatorList[0] = 0;
 	for (i = 0; i < MAX_CLIENTS; i++) {
@@ -1757,7 +1757,7 @@ CG_LoadHudMenu();
 
 =================
 */
-void CG_LoadHudMenu() {
+void CG_LoadHudMenu( void ) {
 	char buff[1024];
 	const char *hudSet;
 
@@ -1824,7 +1824,7 @@ void CG_LoadHudMenu() {
 	CG_LoadMenus(hudSet);
 }
 
-void CG_AssetCache() {
+void CG_AssetCache( void ) {
 	//if (Assets.textFont == NULL) {
 	//  trap_R_RegisterFont("fonts/arial.ttf", 72, &Assets.textFont);
 	//}

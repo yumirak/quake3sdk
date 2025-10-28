@@ -68,7 +68,6 @@ BotNumActivePlayers
 int BotNumActivePlayers(void) {
 	int i, num;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 
 	if (!maxclients)
 		maxclients = trap_Cvar_VariableIntegerValue("sv_maxclients");
@@ -94,7 +93,6 @@ BotIsFirstInRankings
 int BotIsFirstInRankings(bot_state_t *bs) {
 	int i, score;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 	playerState_t ps;
 
 	if (!maxclients)
@@ -122,9 +120,7 @@ BotIsLastInRankings
 int BotIsLastInRankings(bot_state_t *bs) {
 	int i, score;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 	playerState_t ps;
-
 	if (!maxclients)
 		maxclients = trap_Cvar_VariableIntegerValue("sv_maxclients");
 
@@ -151,7 +147,6 @@ char *BotFirstClientInRankings(void) {
 	int i, bestscore, bestclient;
 	char buf[MAX_INFO_STRING];
 	static char name[32];
-	static int maxclients;
 	playerState_t ps;
 
 	if (!maxclients)
@@ -185,7 +180,6 @@ char *BotLastClientInRankings(void) {
 	int i, worstscore, bestclient;
 	char buf[MAX_INFO_STRING];
 	static char name[32];
-	static int maxclients;
 	playerState_t ps;
 
 	if (!maxclients)
@@ -219,7 +213,6 @@ char *BotRandomOpponentName(bot_state_t *bs) {
 	int i, count;
 	char buf[MAX_INFO_STRING];
 	int opponents[MAX_CLIENTS], numopponents;
-	static int maxclients;
 	static char name[32];
 
 	if (!maxclients)

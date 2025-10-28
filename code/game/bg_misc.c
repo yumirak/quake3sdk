@@ -1010,6 +1010,7 @@ grabbing them easier
 */
 qboolean	BG_PlayerTouchesItem( playerState_t *ps, entityState_t *item, int atTime ) {
 	vec3_t		origin;
+	memset( origin, 0, sizeof( origin ) );
 
 	BG_EvaluateTrajectory( &item->pos, atTime, origin );
 

@@ -490,7 +490,7 @@ void G_AddPredictableEvent( gentity_t *ent, int event, int eventParm );
 void G_AddEvent( gentity_t *ent, int event, int eventParm );
 void G_SetOrigin( gentity_t *ent, vec3_t origin );
 void AddRemap(const char *oldShader, const char *newShader, float timeOffset);
-const char *BuildShaderStateConfig();
+const char *BuildShaderStateConfig( void );
 
 //
 // g_combat.c
@@ -712,7 +712,7 @@ void BotTestAAS(vec3_t origin);
 extern	level_locals_t	level;
 extern	gentity_t		g_entities[MAX_GENTITIES];
 
-#define	FOFS(x) ((int)&(((gentity_t *)0)->x))
+#define	FOFS(x) ((size_t)&(((gentity_t *)0)->x))
 
 extern	vmCvar_t	g_gametype;
 extern	vmCvar_t	g_dedicated;

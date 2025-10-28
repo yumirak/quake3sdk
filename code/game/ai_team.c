@@ -83,7 +83,6 @@ BotNumTeamMates
 int BotNumTeamMates(bot_state_t *bs) {
 	int i, numplayers;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 
 	if (!maxclients)
 		maxclients = trap_Cvar_VariableIntegerValue("sv_maxclients");
@@ -127,7 +126,6 @@ int BotSortTeamMatesByBaseTravelTime(bot_state_t *bs, int *teammates, int maxtea
 
 	int i, j, k, numteammates, traveltime;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 	int traveltimes[MAX_CLIENTS];
 	bot_goal_t *goal = NULL;
 
@@ -880,7 +878,6 @@ void BotTeamOrders(bot_state_t *bs) {
 	int teammates[MAX_CLIENTS];
 	int numteammates, i;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 
 	if (!maxclients)
 		maxclients = trap_Cvar_VariableIntegerValue("sv_maxclients");

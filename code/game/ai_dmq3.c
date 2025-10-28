@@ -1426,7 +1426,6 @@ ClientFromName
 int ClientFromName(char *name) {
 	int i;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 
 	if (!maxclients)
 		maxclients = trap_Cvar_VariableIntegerValue("sv_maxclients");
@@ -1446,7 +1445,6 @@ ClientOnSameTeamFromName
 int ClientOnSameTeamFromName(bot_state_t *bs, char *name) {
 	int i;
 	char buf[MAX_INFO_STRING];
-	static int maxclients;
 
 	if (!maxclients)
 		maxclients = trap_Cvar_VariableIntegerValue("sv_maxclients");
